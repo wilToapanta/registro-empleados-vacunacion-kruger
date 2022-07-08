@@ -1,0 +1,24 @@
+
+<table class="table" style="font-size:75%;" >
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Cédula</th>
+        <th scope="col">Nombres</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Correo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employeeService.list">
+        <th scope="row">{{employee.id_employe}}</th>
+        <td>{{employee.identification}}</td>
+        <td>{{employee.names}}</td>
+        <td>{{employee.lastNames}}</td>
+        <td>{{employee.mail}}</td>
+        <td> <i class="far fa-trash-alt fa-lg text-danger"  (click)="deleteEmployee(employee.id_employe)" style="cursor: pointer;">Eliminar</i></td>
+      </tr>
+    </tbody>
+  </table>
+
+ 

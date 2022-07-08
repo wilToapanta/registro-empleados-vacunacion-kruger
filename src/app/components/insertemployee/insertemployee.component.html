@@ -1,0 +1,24 @@
+<br><br>
+<form [formGroup]="form" (ngSubmit)="saveEmployee()">
+    
+    <div class="mb-3">
+        <label class="form-label" >Cédula</label>
+        <input type="text" class="form-control"  required placeholder="Cédula" formControlName="identification">
+      </div>
+
+    <div class="mb-3">
+      <label class="form-label" >Nombres</label>
+      <input type="text" class="form-control"  required placeholder="Nombres" formControlName="names">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" >Apellidos</label>
+        <input type="text" class="form-control"  required placeholder="Apellidos" formControlName="lastNames">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" >Correo</label>
+        <input type="email" class="form-control" required  placeholder="Correo" formControlName="mail">
+      </div>
+    
+    <button type="submit" class="btn btn-primary" >Guardar</button>
+
+  </form>
